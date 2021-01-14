@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-12">
+      <h3>
+        knapsack problem
+      </h3>
+      <p class="text-justify text-left">
+        The knapsack problem is a problem in combinatorial optimization: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible.
+      </p>
+      <p class="font-weight-bold">
+        Now we want to solve this problem by Genetic algorithm please fill under data:
+      </p>
+
+      <div *ngIf="serviceFunction.showChart">
+        <h3 class="text-center mt-4">
+          Best answer Fitness
+          <span class="font-weight-bold text-danger">
+            {{serviceFunction.finalAns.fitness}}
+          </span>
+        </h3>
+
+        <h5 class="text-center mt-2">
+          Best answer Chromosome
+          <span class="font-weight-bold text-danger row mt-2" *ngIf="serviceFunction.finalAns.fitness > 0">
+              {{serviceFunction.finalAns.existenceOfItem}}
+            </span>
+        </h5>
+      </div>
+
+    </div>
+
+    <div class="col-sm-6 col-12">
+      <div class="form-group">
+        <textarea class="form-control" rows="5" id="data" placeholder="Please enter list of appliance here ..."></textarea>
+      </div>
+
+      <div class="input-group mb-3">
+        <input id="Sizeofpopulation" type="number" class="form-control d-block" placeholder="Size of population" aria-label="Recipient's username" aria-describedby="label1">
+        <div class="input-group-append">
+          <span class="input-group-text" id="label1">Recommended more than 50</span>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="number" id="MaxCapacity" class="form-control d-block" placeholder="Max Capacity" aria-label="Recipient's username" aria-describedby="label2">
+        <div class="input-group-append">
+          <span class="input-group-text" id="label2">kg</span>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="number" class="form-control d-block" id="NumberOfGeneration" placeholder="Number of generation" aria-label="Recipient's username" aria-describedby="label3">
+        <div class="input-group-append">
+          <span class="input-group-text" id="label3">Recommended more than 20</span>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="number" class="form-control d-block" id="PossibilityOfMutation" placeholder="Possibility of mutation" aria-label="Recipient's username" aria-describedby="label4">
+        <div class="input-group-append">
+          <span class="input-group-text" id="label4">In 1000</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-info w-100 font-weight-bold py-2 mt-4" (click)="getData()">Start</button>
+  </div>
+
+  <div *ngIf="serviceFunction.showChart" class="mt-5">
+    <app-chart></app-chart>
+  </div>
+</div>

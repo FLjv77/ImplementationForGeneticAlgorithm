@@ -19,6 +19,13 @@
     "@angular/platform-browser": "~10.1.6",
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
+    "angular-highcharts": "^10.0.1",
+    "bootstrap": "^4.5.3",
+    "chart.js": "^2.9.4",
+    "highcharts": "^8.2.2",
+    "jquery": "^3.5.1",
+    "ng2-charts": "^2.4.2",
+    "random": "^2.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

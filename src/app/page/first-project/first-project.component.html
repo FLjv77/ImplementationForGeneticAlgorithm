@@ -1,0 +1,214 @@
+<div class="container">
+  <div class="row border-dark border rounded box-shadow">
+    <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+      <img src="../../../assets/image/q1.png" class="rounded img-fluid">
+    </div>
+    <div class="col-xl-6 col-md-6 col-sm-12 col-12 py-2">
+      <div class="row pr-4">
+        <div class="col-4">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control input-group-sm" [(ngModel)]="NValueQ1" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="n1">N</span>
+            </div>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <input type="number" class="form-control input-group-sm" [(ngModel)]="popSizeQ1" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="size1">Size</span>
+            </div>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <input type="number" class="form-control input-group-sm" [(ngModel)]="sigma1" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="sigma1">sigma</span>
+            </div>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <input type="number" class="form-control input-group-sm" [(ngModel)]="numberOfParent" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="parent">parent</span>
+            </div>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <input type="number" class="form-control input-group-sm" [(ngModel)]="numberOfGeneration" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="NGeneration">G</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check mt-2">
+            <input [(ngModel)]="select" class="form-check-input" type="radio" name="select1" id="sus" value="sus">
+            <label class="form-check-label" for="sus">
+              SUS
+            </label>
+          </div>
+          <div class="form-check mt-2">
+            <input [(ngModel)]="select" class="form-check-input" type="radio" name="select1" id="tournament" value="tournament">
+            <label class="form-check-label" for="tournament">
+              tournament
+            </label>
+          </div>
+          <div class="form-check mt-2">
+            <input [(ngModel)]="select" class="form-check-input" type="radio" name="select1" id="roletWheel" value="rolt">
+            <label class="form-check-label" for="roletWheel">
+              Roulette wheel
+            </label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check mt-2">
+            <input [(ngModel)]="method" class="form-check-input" type="radio" name="mution1" id="role15" value="role">
+            <label class="form-check-label" for="role15">
+              1/5 Role
+            </label>
+          </div>
+          <div class="form-check mt-2">
+            <input [(ngModel)]="method" class="form-check-input" type="radio" name="mution1" id="selfAdaption" value="self">
+            <label class="form-check-label" for="selfAdaption">
+              Self adaption
+            </label>
+          </div>
+          <div class="form-check mt-2">
+            <input [(ngModel)]="method" class="form-check-input" type="radio" name="mution1" id="exactRelation" value="exact">
+            <label class="form-check-label" for="exactRelation">
+              Exact Relation
+            </label>
+          </div>
+        </div>
+
+        <button (click)="testOneDivideFive()" class="btn btn-dark font-weight-bold mt-3 col-12">
+          Execute
+        </button>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="row mt-5 border-dark rounded border box-shadow">
+    <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+      <img src="../../../assets/image/q2.png" class="rounded img-fluid">
+    </div>
+    <div class="col-xl-6 col-md-6 col-sm-12 col-12 py-2">
+      <div class="row pr-4">
+        <div class="col-4">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="size2">Size population</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="select2" id="sus2" value="sus">
+            <label class="form-check-label" for="sus2">
+              SUS
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="select2" id="tournament2" value="tournament">
+            <label class="form-check-label" for="tournament2">
+              tournament
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="select2" id="roletWheel2" value="rolt">
+            <label class="form-check-label" for="roletWheel2">
+              Rolet wheel
+            </label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="mution2" id="role152" value="role">
+            <label class="form-check-label" for="role152">
+              1/5 Role
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="mution2" id="selfAdaption2" value="self">
+            <label class="form-check-label" for="selfAdaption2">
+              Self adaption
+            </label>
+          </div>
+        </div>
+
+        <button class="btn btn-dark font-weight-bold mt-3 col-12">
+          Execute
+        </button>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div class="row mt-5 border-dark rounded border box-shadow">
+    <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+      <img src="../../../assets/image/q3.png" class="rounded img-fluid">
+    </div>
+    <div class="col-xl-6 col-md-6 col-sm-12 col-12 py-2">
+      <div class="row pr-4">
+        <div class="col-4">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="size3">Size population</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="select3" id="sus3" value="sus">
+            <label class="form-check-label" for="sus3">
+              SUS
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="select3" id="tournament3" value="tournament">
+            <label class="form-check-label" for="tournament3">
+              tournament
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="select3" id="roletWheel3" value="rolt">
+            <label class="form-check-label" for="roletWheel3">
+              Rolet wheel
+            </label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="mution3" id="role153" value="role">
+            <label class="form-check-label" for="role153">
+              1/5 Role
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="mution3" id="selfAdaption3" value="self">
+            <label class="form-check-label" for="selfAdaption3">
+              Self adaption
+            </label>
+          </div>
+        </div>
+
+        <button class="btn btn-dark font-weight-bold mt-3 col-12">
+          Execute
+        </button>
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>
